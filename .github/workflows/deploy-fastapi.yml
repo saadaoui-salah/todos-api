@@ -1,4 +1,4 @@
-name: Deploy Django App
+name: Deploy FastAPi App
 
 on:
   push:
@@ -13,8 +13,6 @@ jobs:
       - uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "task-manager-api-f"
+          heroku_app_name: "todos-fastapi"
           heroku_email: ${{ secrets.EMAIL }}
           procfile: "web: uvicorn main:app"
-          appdir: "backend"
-          healthcheck: "https://task-manager-api-f.herokuapp.com/api/user/healthy/"
