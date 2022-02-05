@@ -1,0 +1,29 @@
+{
+    "items":[
+      {
+        "id" : 1,
+        "text": "Learn about Polymer",
+        "is_complete" : true
+      },
+      {
+        "id" : 2,
+        "text" : "Watch Pluralsight course on Docker",
+        "is_complete" : true
+      },
+      {
+        "id" : 3,
+        "text" : "Complete presentation prep for Aurelia presentation",
+        "is_complete" : false
+      },
+      {
+        "id" : 4,
+        "text": "Instrument creation of development environment with Puppet",
+        "is_complete" : false
+      },
+      {
+        "id" : 5,
+        "text": "Transition code base to ES6",
+        "is_complete" : false
+      }
+    ]
+  }
