@@ -15,4 +15,4 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "todos-fastapi"
           heroku_email: ${{ secrets.EMAIL }}
-          procfile: "web: uvicorn main:app --host 0.0.0.0 --port 8000"
+          procfile: "web: uvicorn main:app --host 0.0.0.0 --port $PORT"
