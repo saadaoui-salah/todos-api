@@ -9,6 +9,12 @@ class TodosItem(BaseModel):
     text: str
     is_complete: bool
 
+def save(data):
+    with open('data.json', 'w') as output:
+        output.write(json.dumps(data))
+
+def read():
+    return json.load(open("data.json"))
 
 @app.get("/all-todos")
 def read_todos() -> [TodosItem]:
@@ -16,12 +22,6 @@ def read_todos() -> [TodosItem]:
     return data
 
 
-def save(data):
-    with open('data.json', 'w') as output:
-        output.write(json.dumps(data))
-
-def read():
-    data = json.load(open("data.json"))
 
 @app.get("/filter-by-id/{item_id}/")
 def filter_todos(item_id:int) -> [TodosItem]:
